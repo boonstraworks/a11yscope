@@ -24,10 +24,10 @@ const IMPACT_COLOR = { critical: c.red, serious: c.orange, moderate: c.orange, m
 
 function help() {
   console.log(`
-${c.bold('a11yscan')} — accessibility scanner with EAA / EN 301 549 reporting
+${c.bold('a11yscope')} — accessibility scanner with EAA / EN 301 549 reporting
 
 ${c.bold('Usage:')}
-  npx a11yscan <url> [options]
+  npx a11yscope <url> [options]
 
 ${c.bold('Options:')}
   --report <file>   Write a self-contained HTML report
@@ -39,9 +39,9 @@ ${c.bold('Options:')}
   -v, --version     Show version
 
 ${c.bold('Examples:')}
-  npx a11yscan https://example.com
-  npx a11yscan https://example.com --report report.html
-  npx a11yscan ./index.html --tags wcag2aa
+  npx a11yscope https://example.com
+  npx a11yscope https://example.com --report report.html
+  npx a11yscope ./index.html --tags wcag2aa
 `);
 }
 
@@ -74,7 +74,7 @@ async function main() {
   }
 
   const { values, positionals } = parsed;
-  if (values.version) return console.log(`a11yscan v${VERSION}`);
+  if (values.version) return console.log(`a11yscope v${VERSION}`);
   if (values.help || positionals.length === 0) return help();
 
   const url = toUrl(positionals[0]);
