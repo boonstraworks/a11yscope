@@ -1,0 +1,7 @@
+node_modules/
+*.log
+a11yscan-report.html
+*.report.html
+report.html
+results.json
+.DS_Store

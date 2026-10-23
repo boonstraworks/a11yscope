@@ -1,0 +1,43 @@
+{
+  "name": "a11yscan",
+  "version": "0.1.0",
+  "description": "Fast accessibility scanner (axe-core + Playwright) with European Accessibility Act / EN 301 549 reporting. One command, one clear HTML report.",
+  "type": "module",
+  "bin": {
+    "a11yscan": "bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "scan": "node bin/cli.js",
+    "demo": "node bin/cli.js examples/broken.html --report a11yscan-report.html"
+  },
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "axe",
+    "axe-core",
+    "wcag",
+    "eaa",
+    "european-accessibility-act",
+    "en301549",
+    "audit",
+    "scanner",
+    "cli",
+    "playwright"
+  ],
+  "author": "Steven Boonstra (BoonstraWorks) <info@boonstraworks.nl>",
+  "license": "MIT",
+  "homepage": "https://boonstraworks.nl",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "playwright": "^1.48.0"
+  }
+}
